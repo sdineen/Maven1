@@ -3,6 +3,7 @@ package com.qa.week2.junit;
 import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TemperatureConverterTest {
@@ -15,6 +16,7 @@ public class TemperatureConverterTest {
 		temperatureConverter = new TemperatureConverter();
 	}
 
+	@Ignore
 	@Test
 	public void testConvertFahrenheitToCelsius() {
 		float actual = temperatureConverter.convertFahrenheitToCelsius(100);

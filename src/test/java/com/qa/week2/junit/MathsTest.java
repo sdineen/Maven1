@@ -12,6 +12,13 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 public class MathsTest {
+	
+	@Test
+	public void testReverseFactorial() {
+		int value = Maths.reverseFactorial(720);
+		assertEquals(6, value);
+	}
+	
 
 	@Test
 	public void testDivide() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.qa.week2.junit.BlackjackSimpleTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="com.qa.week2.junit.EmailTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="strip"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -58,6 +58,11 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.qa.week2.junit.BlackjackSimpleTest" name="testPlay1" time="0.004"/>
-  <testcase classname="com.qa.week2.junit.BlackjackSimpleTest" name="testPlay2" time="0"/>
+  <testcase classname="com.qa.week2.junit.EmailTest" name="testIsValidEmailGreenPathDifferentDomainName" time="0"/>
+  <testcase classname="com.qa.week2.junit.EmailTest" name="testIsValidEmailRedPathDomainTooLong" time="0"/>
+  <testcase classname="com.qa.week2.junit.EmailTest" name="testIsValidEmailGreenPath" time="0"/>
+  <testcase classname="com.qa.week2.junit.EmailTest" name="testIsValidEmailRedPathSpecialCharacterAtBeginning" time="0"/>
+  <testcase classname="com.qa.week2.junit.EmailTest" name="testIsValidEmailRedPathNoDomainName" time="0"/>
+  <testcase classname="com.qa.week2.junit.EmailTest" name="testIsValidEmailRedPathSpecialCharacterAtEnd" time="0"/>
+  <testcase classname="com.qa.week2.junit.EmailTest" name="testIsValidEmailRedPathNoAddress" time="0"/>
 </testsuite>

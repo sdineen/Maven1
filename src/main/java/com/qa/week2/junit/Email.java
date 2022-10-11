@@ -15,8 +15,7 @@ public class Email {
 		if(part1.startsWith("_"))
 			return false;
 		if(part1.length()==0)
-			return false;
-		
+			return false;	
 		return true;
 	}
 
