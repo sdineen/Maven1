@@ -6,8 +6,9 @@ import java.sql.SQLException;
 
 public class CustomerRepository {
 
+	//CREATE TABLE Customer (ID INT PRIMARY KEY,   FIRSTNAME VARCHAR(255), SURNAME VARCHAR(255));
 	public Connection getConnection() throws SQLException {
-		String jdbcUrl = "jdbc:h2:~/db1";
+		String jdbcUrl = "";
 		return DriverManager.getConnection(jdbcUrl);
 	}
 
