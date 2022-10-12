@@ -70,7 +70,10 @@ public class CustomerRepository {
 	public void update(Customer customer) throws SQLException {
 		Connection connection = getConnection();
 		Statement statement = connection.createStatement();
-		statement.executeUpdate(sql);		
+		String sql = String.format("update customer set firstname ='%s', surname='%s' where id=%d", 
+				customer.getFirstname()
+				,customer.getSurname(), customer.getId());
+		statement.executeUpdate(sql );		
 	}
 	
 
