@@ -1,4 +1,4 @@
-package com.qa.week2.junit;
+package com.qa.week2.tuesday.junit;
 
 public class Maths {
 	public int add(int a, int b) {

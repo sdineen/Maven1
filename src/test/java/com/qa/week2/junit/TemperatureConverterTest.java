@@ -6,6 +6,8 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.qa.week2.tuesday.junit.TemperatureConverter;
+
 public class TemperatureConverterTest {
 	
 	

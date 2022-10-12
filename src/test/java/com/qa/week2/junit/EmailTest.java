@@ -6,6 +6,8 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.qa.week2.tuesday.junit.Email;
+
 public class EmailTest {
 
     private Email email;

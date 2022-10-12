@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.qa.week2.tuesday.junit.BlackjackSimple;
+
 public class BlackjackSimpleTest {
 
 	@Test
