@@ -2,6 +2,7 @@ package com.qa.week2.wednesday.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -41,10 +42,25 @@ public class CustomerRepository {
 		customer.getId(),customer.getFirstname(),customer.getSurname());
 		
 		statement.executeUpdate(sql );
-		
 
 		
-		
 	}
+
+	public Customer read(int id) throws SQLException {
+		Connection connection = getConnection();
+		Statement statement = connection.createStatement();
+		String sql = "SELECT * FROM Customer where id = "+id;
+		ResultSet resultSet = statement.executeQuery(sql );
+		Customer customer;
+		if(resultSet.next()) {
+			customer = new Customer(
+					resultSet.getInt("id"),
+					resultSet.getString("firstName"),
+					resultSet.getString("surname"));
+			return customer;
+		}
+		return null;
+	}
+	
 
 }
