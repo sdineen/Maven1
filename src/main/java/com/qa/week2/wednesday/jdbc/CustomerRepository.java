@@ -61,6 +61,17 @@ public class CustomerRepository {
 		}
 		return null;
 	}
+
+	/**
+	 * Update an existing Customer
+	 * @param customer to be updated
+	 * @throws SQLException
+	 */
+	public void update(Customer customer) throws SQLException {
+		Connection connection = getConnection();
+		Statement statement = connection.createStatement();
+		statement.executeUpdate(sql);		
+	}
 	
 
 }

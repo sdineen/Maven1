@@ -16,8 +16,11 @@ public class Main {
 //		Customer customer1 = new Customer(2, "Jane", "Smith");
 //		repository.createCustomer(customer1);
 		
-		Customer customer = repository.read(1);
-		System.out.println(customer);
+//		Customer customer = repository.read(1);
+//		System.out.println(customer);
+		
+		Customer customer1 = new Customer(2, "Juliet", "Smith");
+		repository.update(customer1);
 		
 		
 
