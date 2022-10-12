@@ -6,6 +6,8 @@ import java.sql.SQLException;
 
 public class CustomerRepository {
 
+	String jdbcH2Url = "jdbc:h2:~/db1";
+	
 	String jdbcUrl = "jdbc:mysql://localhost:3306/ecommerce";
 	String username = "root";
 	String password = "carpond";
@@ -15,7 +17,8 @@ public class CustomerRepository {
 	public Connection getConnection() throws SQLException {
 		//String jdbcUrl = "jdbc:h2:~/db1";
 		
-		return DriverManager.getConnection(jdbcUrl, username, password);
+		return DriverManager.getConnection(jdbcH2Url)
+		//return DriverManager.getConnection(jdbcUrl, username, password);
 	}
 
 }
