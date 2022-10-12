@@ -14,7 +14,7 @@ public class Main {
 		System.out.println(connection.getMetaData().getDatabaseProductName());
 		
 		Customer customer1 = new Customer(1, "John", "Smith");
-		//repository.createCustomer(customer1);
+		repository.createCustomer(customer1);
 		
 		
 

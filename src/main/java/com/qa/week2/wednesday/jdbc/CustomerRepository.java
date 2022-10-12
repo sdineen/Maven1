@@ -3,6 +3,7 @@ package com.qa.week2.wednesday.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class CustomerRepository {
 
@@ -29,9 +30,17 @@ public class CustomerRepository {
 		return DriverManager.getConnection(jdbcUrl, username, password);
 	}
 
-	public void createCustomer(Customer customer1) {
-		//get a connection
+	public void createCustomer(Customer customer) throws SQLException {
+		Connection connection = getConnection();
 		//get a statement
+		Statement statement = connection.createStatement();
+//		String sql = "insert into Customer (id,firstName, surname) values ("
+//		+customer.getId()+",'"+customer.getFirstname()+"','"+customer.getSurname()+"')";
+		
+		String sql = String.format("insert into Customer (id,firstName, surname) values (%d,'%s','%s')",
+		customer.getId(),customer.getFirstname(),customer.getSurname());
+		
+		statement.executeUpdate(sql );
 		
 
 		
