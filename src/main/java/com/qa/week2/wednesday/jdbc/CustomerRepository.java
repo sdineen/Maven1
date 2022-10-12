@@ -29,4 +29,13 @@ public class CustomerRepository {
 		return DriverManager.getConnection(jdbcUrl, username, password);
 	}
 
+	public void createCustomer(Customer customer1) {
+		//get a connection
+		//get a statement
+		
+
+		
+		
+	}
+
 }
