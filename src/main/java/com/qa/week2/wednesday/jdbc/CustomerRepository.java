@@ -6,19 +6,27 @@ import java.sql.SQLException;
 
 public class CustomerRepository {
 
-	String jdbcH2Url = "jdbc:h2:~/db1";
+	private String jdbcUrl = "";
+	private String username = "";
+	private String password = "";
 	
-	String jdbcUrl = "jdbc:mysql://localhost:3306/ecommerce";
-	String username = "root";
-	String password = "carpond";
+
+	public CustomerRepository(String jdbcUrl) {
+		this.jdbcUrl = jdbcUrl;
+	}
+
+	public CustomerRepository(String jdbcUrl, String username, String password) {
+		this.jdbcUrl = jdbcUrl;
+		this.username = username;
+		this.password = password;
+	}
+
+
 
 
 	//CREATE TABLE Customer (ID INT PRIMARY KEY,   FIRSTNAME VARCHAR(255), SURNAME VARCHAR(255));
 	public Connection getConnection() throws SQLException {
-		//String jdbcUrl = "jdbc:h2:~/db1";
-		
-		return DriverManager.getConnection(jdbcH2Url)
-		//return DriverManager.getConnection(jdbcUrl, username, password);
+		return DriverManager.getConnection(jdbcUrl, username, password);
 	}
 
 }
