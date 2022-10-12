@@ -6,10 +6,16 @@ import java.sql.SQLException;
 
 public class CustomerRepository {
 
+	String jdbcUrl = "jdbc:mysql://localhost:3306/ecommerce";
+	String username = "root";
+	String password = "carpond";
+
+
 	//CREATE TABLE Customer (ID INT PRIMARY KEY,   FIRSTNAME VARCHAR(255), SURNAME VARCHAR(255));
 	public Connection getConnection() throws SQLException {
-		String jdbcUrl = "";
-		return DriverManager.getConnection(jdbcUrl);
+		//String jdbcUrl = "jdbc:h2:~/db1";
+		
+		return DriverManager.getConnection(jdbcUrl, username, password);
 	}
 
 }
