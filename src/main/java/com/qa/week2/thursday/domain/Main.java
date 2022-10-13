@@ -25,6 +25,9 @@ public class Main {
 		products.add(product2);
 		Product p1 = products.get(0);
 		System.out.println(p1);
+		
+		
+		VeblenGood veblen1 = new VeblenGood(3, "Krug champagne", 40);
 
 	}
 

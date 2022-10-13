@@ -1,7 +1,7 @@
 package com.qa.week2.thursday.domain;
 
 
-public class Product extends Object {
+public class Product  {
 	//instance variables, or attributes, or fields
 	private long id;	
 	private String name;
@@ -51,6 +51,9 @@ public class Product extends Object {
 		return retailPrice;
 	}
 	public void setRetailPrice(double retailPrice) {
+		if(retailPrice < 0) {
+			throw new IllegalArgumentException("Retail price can't be negative");
+		}
 		this.retailPrice = retailPrice;
 	}
 }
