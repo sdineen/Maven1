@@ -28,6 +28,7 @@ public class Main {
 		
 		
 		VeblenGood veblen1 = new VeblenGood(3, "Krug champagne", 40);
+		System.out.println(veblen1.getRetailPrice());
 
 	}
 
