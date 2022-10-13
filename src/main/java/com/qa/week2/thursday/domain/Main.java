@@ -5,31 +5,22 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) {
-	
-		
-		
-		Product product1 = new Product();
-		product1.setId(1);
-		product1.setName("bean bag");
-		product1.setCostPrice(17);
-		product1.setRetailPrice(26);
-		
-		Product product2 = new Product(2, "Dog food", 0.57, 1.65);
-		
-		
-		ArrayList<Product> products = new ArrayList<>();
-		System.out.println(products.size());
-		System.out.println(products.isEmpty());
-		
-		products.add(product1);
-		products.add(product2);
-		Product p1 = products.get(0);
-		System.out.println(p1);
-		
-		
-		VeblenGood veblen1 = new VeblenGood(3, "Krug champagne", 40);
-		System.out.println(veblen1.getRetailPrice());
 
+		ArrayList<Product> products = new ArrayList<>();
+
+		VeblenGood veblen1 = new VeblenGood(1, "Krug champagne", 40);
+		VeblenGood veblen2 = new VeblenGood(2, "Rolex watch", 400);
+		NormalGood normal1 = new NormalGood(3, "Ford Focus", 9000);
+		NormalGood normal2 = new NormalGood(4, "Sardine can", 0.5);
+		
+		products.add(veblen1);
+		products.add(veblen2);
+		products.add(normal1);
+		products.add(normal2);
+		
+		for (Product product : products) {
+			System.out.println(product);
+		}
 	}
 
 }

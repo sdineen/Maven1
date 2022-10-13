@@ -9,4 +9,11 @@ public class VeblenGood extends Product {
 //		setCostPrice(costPrice);
 	}
 
+	@Override
+	public double getRetailPrice() {
+		return getCostPrice()*5;
+	}
+	
+	
+
 }
