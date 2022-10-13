@@ -9,7 +9,7 @@ public class Main {
 		//CustomerRepository repository = new CustomerRepository("jdbc:h2:~/db1");
 		
 		
-		CustomerRepository repository = new CustomerRepository(
+		JdbcCustomerRepository repository = new JdbcCustomerRepository(
 				"jdbc:mysql://localhost:3306/ecommerce",
 				"root","carpond");
 		
