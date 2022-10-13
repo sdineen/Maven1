@@ -70,4 +70,30 @@ public class CustomerRepository {
 		statement.executeUpdate(sql);
 	}
 
+	public void delete(int id) throws SQLException {
+		Connection connection = null;
+		try {
+		    connection = DriverManager.getConnection(jdbcUrl, username, password);
+			Statement statement = connection.createStatement();
+			String sql = "delete from Customer where id = " + id;
+			statement.executeUpdate(sql);
+		} finally {
+			connection.close();
+		}
+	}
+	
+	public void deleteTryWithResources(int id) throws DataAccessException {
+		try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);) {		    
+			Statement statement = connection.createStatement();
+			String sql = "deletezzz from Customer where id = " + id;
+			statement.executeUpdate(sql);
+		} 
+		catch(SQLException e) {
+			throw new DataAccessException("unable to delete customer "+id, e);
+		}
+		
+	}
+	
+	
+
 }

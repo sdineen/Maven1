@@ -13,11 +13,9 @@ public class Main {
 			int j = 1 / 0;
 			int i = Integer.parseInt(s); // NumberFormatException is an unchecked exception, so handling it is optional
 			System.out.println(i);
-		} catch (NumberFormatException e) {
+		} catch (NumberFormatException | ArithmeticException e) {
 			System.out.println(e.getMessage());
-		} catch (ArithmeticException e) {
-			System.out.println(e.getMessage());
-		} finally {
+		}  finally {
 			System.out.println("always executed");
 		}
 
