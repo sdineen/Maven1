@@ -1,26 +1,30 @@
 package com.qa.week2.thursday.domain;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
 	public static void main(String[] args) {
-
-		ArrayList<Product> products = new ArrayList<>();
-
-		VeblenGood veblen1 = new VeblenGood(1, "Krug champagne", 40);
+		
+		Address address = new Address(1, "4 Acacia Avenue", "Newcastle", "N152AR");
+		Customer customer1 = new Customer(1, "John Jones", address);
+	    //object reference conversion
+		Product veblen1 = new VeblenGood(1, "Krug champagne", 40);
 		VeblenGood veblen2 = new VeblenGood(2, "Rolex watch", 400);
 		NormalGood normal1 = new NormalGood(3, "Ford Focus", 9000);
 		NormalGood normal2 = new NormalGood(4, "Sardine can", 0.5);
-		
-		products.add(veblen1);
-		products.add(veblen2);
-		products.add(normal1);
-		products.add(normal2);
-		
-		for (Product product : products) {
-			System.out.println(product);
-		}
+
+		Order order1 = new Order();
+		order1.setId(1);
+		order1.setOrderDate(LocalDate.now());
+		List<LineItem> lineItems = new ArrayList<>();
+		lineItems.add(new LineItem(1,veblen1, 6));
+		lineItems.add(new LineItem(2,normal1, 1));
+		order1.setLineItems(lineItems);
+		order1.setCustomer(customer1);
+		System.out.println(order1);
 	}
 
 }
