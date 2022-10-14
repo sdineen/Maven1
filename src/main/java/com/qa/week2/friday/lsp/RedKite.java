@@ -8,14 +8,6 @@ package com.qa.week2.friday.lsp;
  */
 public class RedKite extends FlyingBird {
 
-	public RedKite(){
-
-	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
-
 	public void fly(){
 
 	}
