@@ -32,25 +32,46 @@ public class CollectionProductRepository implements ProductRepository {
 
 	@Override
 	public List<Product> findByNameContaining(String partOfName) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Product> productList = new ArrayList<>();
+		for (Product product : products) {
+			if(product.getName().equals(partOfName)) {
+				productList.add(product);
+			}
+		}
+		return productList;
 	}
 
 	@Override
 	public List<Product> findByRetailPriceLessThanEqual(double max) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Product> productList = new ArrayList<>();
+		for (Product product : products) {
+			if(product.getRetailPrice() <= max) {
+				productList.add(product);
+			}
+		}
+		return productList;
 	}
 
 	@Override
 	public boolean update(Product product) {
-		// TODO Auto-generated method stub
+		for (Product p : products) {
+			if(p.getId() == product.getId()) {
+				products.remove(product);
+				products.add(product);
+				return true;
+			}
+		}
 		return false;
 	}
 
 	@Override
 	public boolean deleteById(Long id) {
-		// TODO Auto-generated method stub
+		for (Product p : products) {
+			if(p.getId() == id) {
+				products.remove(p);
+				return true;
+			}
+		}
 		return false;
 	}
 
