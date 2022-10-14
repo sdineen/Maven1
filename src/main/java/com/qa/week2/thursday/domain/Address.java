@@ -12,8 +12,7 @@ public class Address {
 		setCity(city);
 		setPostcode(postcode);
 	}
-	
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

@@ -11,19 +11,22 @@ public class CollectionProductRepository implements ProductRepository {
 
 	@Override
 	public long create(Product product) {
-		// TODO Auto-generated method stub
-		return 0;
+		products.add(product);
+		return product.getId();
 	}
 
 	@Override
 	public List<Product> selectAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return products;
 	}
 
 	@Override
 	public Product findById(long id) {
-		// TODO Auto-generated method stub
+		for (Product product : products) {
+			if(product.getId() == id)
+				return product;
+		}
 		return null;
 	}
 
